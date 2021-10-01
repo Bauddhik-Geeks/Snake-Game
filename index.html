@@ -13,7 +13,8 @@
 		}
 
 		#mycanvas {
-
+      			padding: 2%;
+			width: 93%;
 			background-image: url("Assets/bg.jpg");
 			border: 20px solid green;
 		}
@@ -35,21 +36,15 @@
 			cursor: pointer;
 		}
 	</style>
-
 </head>
 
-<body>
-	<!--<div id="mydiv"></div>
-		<div> </div>-->
-	<div id="high-score-container">
+<body style="overflow-x: hidden;">
+		<div id="high-score-container">
 		<div id="high-score">High Score is: </div>
 		<button id="reset-high-score-btn">Reset</button>
 	</div>
 	<canvas id="mycanvas"> </canvas>
 	<script src="snake.js"></script>
 
-
-
 </body>
-
 </html>
