@@ -159,7 +159,7 @@ function getRandomFood(){
 
 function gameloop(){					// will run until game is not over
 	if(game_over==true){
-		clearInterval(f);	
+		clearInterval(intervalId);	
 		alert("Game Over");			// popup for game over when it touches the boundary
 		return;
 	}
@@ -169,7 +169,10 @@ function gameloop(){					// will run until game is not over
 		
 init();					// that top init function is called at first once
 
-var f = setInterval(gameloop,100); 		// setting interval of 100 milisecond
+var intervalId;
+document.getElementById("start").addEventListener("click", () => {
+	intervalId = setInterval(gameloop, 100); // setting interval of 100 milisecond
+});
 
 
 
