@@ -13,7 +13,7 @@ function init(){
 
 	//Create a Image Object for food
 	food_img = new Image();
-	food_img.src = "Assets/apple.png";
+	food_img.src = "Assets/foods/food-1.png";
 
 	trophy = new Image();
 	trophy.src = "Assets/trophy.png";
@@ -144,6 +144,9 @@ function getRandomFood(){
 
 	var foodX = Math.round(Math.random()*(W-cs)/cs); 		//getting random food value's X cordinate 
 	var foodY = Math.round(Math.random()*(H-cs)/cs);		// now I'm getting random value of Y cordinate 
+
+	const foodNumber = Math.trunc(Math.random() * 4) + 1;
+	food_img.src = `Assets/foods/food-${foodNumber}.png`;
 
 	var food = {
 		x:foodX,
