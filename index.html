@@ -18,11 +18,34 @@
 			background-image: url("Assets/bg.jpg");
 			border: 20px solid green;
 		}
+
+		.color {
+			position: absolute;
+			right: 30px;
+			top: 20px;
+			background-color: white;
+			border-radius: 20px;
+			box-shadow: 0 0 5px #00000050;
+			padding: 20px 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.color > div {
+			margin-bottom: 7px;
+		}
 	</style>
 
 </head>
 
 <body style="overflow-x: hidden;">
+	<div class="color" id="color-container">
+		<div>Please select a snake color</div>
+		<div>
+			<input type="color" id="snake-color" value="#0000ff" />
+		</div>
+	</div>
 	<canvas id="mycanvas"> </canvas>
 	<script src="snake.js"></script>
 </body>
