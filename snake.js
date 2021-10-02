@@ -1,8 +1,8 @@
-
-
-
+const colorContainer = document.getElementById('color-container');
+const snakeColor = document.getElementById('snake-color');
 	// this Function will run only once
 function init(){
+	colorContainer.style.display = "none";
 	canvas = document.getElementById('mycanvas');
 	W = H = canvas.width = canvas.height = 1000;
 	pen = canvas.getContext('2d');
@@ -22,7 +22,7 @@ function init(){
 
 	snake = {
 		init_len:5,
-		color:"blue",
+		color: snakeColor.value,
 		cells:[],
 		direction:"right",
 
@@ -42,7 +42,7 @@ function init(){
 
 		updateSnake:function(){
 							//console.log("updating snake according to the direction property");
-							//check if the snake has eaten food, increase the length of the snake and 
+							//check if the snake has eaten food, increase the length of the snake and
 							//generate new food object
 			var headX = this.cells[0].x;
 			var headY = this.cells[0].y;
@@ -58,7 +58,7 @@ function init(){
 				this.cells.pop();
 			}
 
-			
+
 			var nextX,nextY;
 
 			if(this.direction=="right"){
@@ -102,7 +102,7 @@ function init(){
 		else if(e.key=="ArrowLeft"){
 			snake.direction = "left";		// for left key
 		}
-		else if(e.key=="ArrowDown"){		
+		else if(e.key=="ArrowDown"){
 			snake.direction = "down";		// for down key
 		}
 		else{
@@ -113,7 +113,7 @@ function init(){
 
 
 	document.addEventListener('keydown',keyPressed) ;
-	
+
 }
 
 
@@ -132,18 +132,18 @@ function draw(){
 	pen.font = "20px Roboto"
 	pen.fillText(score,50,50);
 
-	
+
 }
 
 function update(){
 				//console.log("In Update");
-	snake.updateSnake(); 
+	snake.updateSnake();
 }
 
 function getRandomFood(){
 
-	var foodX = Math.round(Math.random()*(W-cs)/cs); 		//getting random food value's X cordinate 
-	var foodY = Math.round(Math.random()*(H-cs)/cs);		// now I'm getting random value of Y cordinate 
+	var foodX = Math.round(Math.random()*(W-cs)/cs); 		//getting random food value's X cordinate
+	var foodY = Math.round(Math.random()*(H-cs)/cs);		// now I'm getting random value of Y cordinate
 
 	const foodNumber = Math.trunc(Math.random() * 4) + 1;
 	food_img.src = `Assets/foods/food-${foodNumber}.png`;
@@ -151,8 +151,8 @@ function getRandomFood(){
 	var food = {
 		x:foodX,
 		y:foodY,
-		color:"red",			
-	}	
+		color:"red",
+	}
 	return food;				// returning food with random food values(i.e, cordinates)
 
 }
@@ -166,7 +166,7 @@ function gameloop(){					// will run until game is not over
 	draw();
 	update();
 }
-		
+
 init();					// that top init function is called at first once
 
 var intervalId;
