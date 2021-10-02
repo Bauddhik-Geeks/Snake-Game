@@ -40,13 +40,22 @@
 </head>
 
 <body style="overflow-x: hidden;">
-	<div class="color" id="color-container">
-		<div>Please select a snake color</div>
-		<div>
-			<input type="color" id="snake-color" value="#0000ff" />
-		</div>
-	</div>
-	<canvas id="mycanvas"> </canvas>
+<div style="display: flex; justify-content: space-around; flex-direction: column">
+      <div style="display: flex; flex-direction: row">
+        <button id="start" style="max-height: 4rem; padding: 1rem 1.25rem; margin: 2rem;x`
+            font-size: 1.25rem; border-radius: 2rem; background-color: #bae97a;
+            border-style: none">
+          Start Game
+        </button>
+        <div class="color" id="color-container">
+          <div>Please select a snake color</div>
+          <div>
+            <input type="color" id="snake-color" value="#0000ff" />
+          </div>
+        </div>
+      </div>
+      <canvas id="mycanvas"> </canvas>
+    </div>
 	<script src="snake.js"></script>
 </body>
 
