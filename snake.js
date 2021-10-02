@@ -8,6 +8,18 @@ function init(){
 	game_over = false;
 	score = 5;
 
+	//Adds listener to reset high score
+	resetButton = document.getElementById('reset-high-score-btn');
+	resetButton.addEventListener('click', () => {
+		localStorage.removeItem('highScore');
+		high_score = localStorage.getItem('highScore') || 5;
+		highScoreText.innerText = `High score: ${high_score}`;
+	}, { once: true });
+
+	//Get highscore from localstorage and update display
+	highScoreText = document.getElementById('high-score');
+	high_score = localStorage.getItem('highScore') || 5;
+	highScoreText.innerText = `High score: ${high_score}`;
 
 	//Create a Image Object for food
 	food_img = new Image();
@@ -157,6 +169,11 @@ function getRandomFood(){
 
 function gameloop(){					// will run until game is not over
 	if(game_over==true){
+		if (score > high_score) {
+			high_score = score;
+		}
+		highScoreText.innerText = `High score: ${high_score}`;  // Updates high score
+		localStorage.setItem('highScore', high_score); // Sets high score in LS
 		clearInterval(intervalId);
 		document.getElementById("start").innerText = "Restart Game"
 		alert("Game Over");			// popup for game over when it touches the boundary
