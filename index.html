@@ -19,6 +19,23 @@
 			border: 20px solid green;
 		}
 
+		#high-score-container {
+			display: flex;
+			align-items: center;
+			font-size: 36px;
+		}
+
+		#high-score-container>button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 30px;
+			border: none;
+			padding: 10px;
+			margin-left: 20px;
+			cursor: pointer;
+		}
+
 		.color {
 			position: absolute;
 			right: 30px;
@@ -47,6 +64,10 @@
             border-style: none">
           Start Game
         </button>
+		<div id="high-score-container">
+			<div id="high-score">High Score is: </div>
+			<button id="reset-high-score-btn">Reset</button>
+		</div>
         <div class="color" id="color-container">
           <div>Please select a snake color</div>
           <div>
