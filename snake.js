@@ -168,6 +168,7 @@ function gameloop(){					// will run until game is not over
 
 var intervalId;
 document.getElementById("start").addEventListener("click", () => {
+	clearInterval(intervalId)
 	init();					// that top init function is called at first once
 	intervalId = setInterval(gameloop, 100); // setting interval of 100 milisecond
 });
