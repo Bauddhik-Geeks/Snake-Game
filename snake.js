@@ -1,8 +1,6 @@
-const colorContainer = document.getElementById('color-container');
 const snakeColor = document.getElementById('snake-color');
 	// this Function will run only once
 function init(){
-	colorContainer.style.display = "none";
 	canvas = document.getElementById('mycanvas');
 	W = H = canvas.width = canvas.height = 1000;
 	pen = canvas.getContext('2d');
@@ -176,7 +174,8 @@ function gameloop(){					// will run until game is not over
 		}
 		highScoreText.innerText = `High score: ${high_score}`;  // Updates high score
 		localStorage.setItem('highScore', high_score); // Sets high score in LS
-		clearInterval(intervalId);	
+		clearInterval(intervalId);
+		document.getElementById("start").innerText = "Restart Game"
 		alert("Game Over");			// popup for game over when it touches the boundary
 		return;
 	}
@@ -184,10 +183,10 @@ function gameloop(){					// will run until game is not over
 	update();
 }
 
-init();					// that top init function is called at first once
-
 var intervalId;
 document.getElementById("start").addEventListener("click", () => {
+	clearInterval(intervalId)
+	init();					// that top init function is called at first once
 	intervalId = setInterval(gameloop, 100); // setting interval of 100 milisecond
 });
 
