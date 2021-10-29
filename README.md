@@ -1,6 +1,6 @@
 # Snake-Game
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ## Contributors ✨
 
@@ -16,6 +16,7 @@ Thanks goes to these wonderful people :
     <td align="center"><a href="https://github.com/OmDharme"><img src="https://avatars.githubusercontent.com/u/85190369?v=4?s=100" width="100px;" alt=""/><br /><sub><b>OmDharme</b></sub></a><br /><a href="https://github.com/Bauddhik-Geeks/Snake-Game/commits?author=OmDharme" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/aanchal-fatwani"><img src="https://avatars.githubusercontent.com/u/63228776?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aanchal</b></sub></a><br /><a href="https://github.com/Bauddhik-Geeks/Snake-Game/commits?author=aanchal-fatwani" title="Code">💻</a></td>
     <td align="center"><a href="https://gourav-saini.netlify.app/"><img src="https://avatars.githubusercontent.com/u/46393634?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gourav Saini</b></sub></a><br /><a href="https://github.com/Bauddhik-Geeks/Snake-Game/commits?author=g7i" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ayush78781"><img src="https://avatars.githubusercontent.com/u/76848435?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ayush Saxena</b></sub></a><br /><a href="https://github.com/Bauddhik-Geeks/Snake-Game/commits?author=ayush78781" title="Code">💻</a></td>
   </tr>
 </table>
 
