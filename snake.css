@@ -1,0 +1,60 @@
+#mydiv {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 20px;
+}
+
+#mycanvas {
+    padding: 3%;
+    width: 90vw;
+    text-align: center;
+    justify-content: center;
+    background-image: url("Assets/bg.jpg");
+    border: 20px solid green;
+    height: 30vw;
+}
+
+#high-score-container {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+}
+
+#high-score-container>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border: none;
+    padding: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.color {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #00000050;
+    box-sizing: content-box;
+    width: 250px;
+    height: 100px;
+    right: 2px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.color>div {
+    font-size: 22px;
+    margin-bottom: 11px;
+}
+
+#logoImg {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-right: -10%;
+}
